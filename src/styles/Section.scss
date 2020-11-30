@@ -1,0 +1,49 @@
+@import "__variables.scss";
+.aboutSection {
+	height: 100vh;
+	max-width: 100%;
+	position: relative;
+	background: $yellowGradient;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: flex-start;
+	overflow: hidden;
+
+	&__textContainer {
+		position: relative;
+		top: 0;
+		right: 100px;
+		width: 48%;
+		margin: 30px;
+		background: $darkGradient;
+		color: $white;
+		padding: 40px;
+		border-radius: 15px;
+		&__header {
+			font-size: 55px;
+		}
+		&__text {
+			margin-top: 15px;
+			text-align: left;
+		}
+	}
+	&__parallaxContainer {
+		align-self: flex-start;
+		padding: 18px;
+		margin: 35px 50px;
+		max-width: 42vw;
+		max-height: 85%;
+		&__svg {
+			position: relative;
+			top: -7vh !important;
+			left: 0px !important;
+			width: 85%;
+			height: 40%;
+		}
+	}
+	&__svg-wave {
+		@include svg;
+		transform: scaleX(-1);
+	}
+}

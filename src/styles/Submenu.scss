@@ -1,0 +1,41 @@
+.submenu {
+	position: absolute;
+	top: 80px;
+	display: flex;
+	z-index: 100;
+	flex-direction: column;
+	background-color: #ffcc00;
+	list-style: none;
+	text-align: center;
+	border-radius: 0 0 15px 15px;
+	transition: 0.4s linear;
+	color: rgb(18, 19, 22);
+	&--clicked {
+		display: none;
+	}
+	&__item {
+		margin: 12px;
+		text-align: center;
+
+		&-link {
+			color: white;
+			padding: 15px 10px;
+			margin: 15px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.submenu {
+		display: flex;
+		position: relative;
+		top: 0px;
+		flex-direction: column;
+		background-color: #ffcc00;
+		list-style: none;
+		text-align: center;
+		border-radius: 0;
+	}
+}

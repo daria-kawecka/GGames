@@ -1,0 +1,11 @@
+$yellowGradient: linear-gradient(180deg, #ffcc00 0%, #e8a60c 80%);
+$darkGradient: linear-gradient(-90deg, rgb(22, 24, 29) 0%, rgb(10, 10, 10) 100%);
+
+$white: rgb(237, 237, 237);
+$yellow: #ffcc00;
+
+@mixin svg {
+	position: absolute;
+	left: 0;
+	bottom: 0%;
+}
