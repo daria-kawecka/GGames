@@ -4,6 +4,7 @@
 	height: 100vh;
 	background: $darkGradient;
 	position: relative;
+	top: -10%;
 	&__header {
 		color: $white;
 		font-size: 55px;
@@ -12,13 +13,13 @@
 	}
 	&__container {
 		display: flex;
-		margin: 15px 25px;
+		margin: 10px 25px;
 		padding: 30px;
-		height: 70%;
+		height: 65%;
 		justify-content: space-evenly;
 		align-items: center;
 		.crewSection__crewMember {
-			width: 28%;
+			width: 22%;
 			height: 85%;
 			background: $yellowGradient;
 			border-radius: 11px;
