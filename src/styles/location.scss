@@ -1,0 +1,16 @@
+@import "__variables.scss";
+
+.locationSection {
+    height: 100vh;
+	max-width: 100%;
+	position: relative;
+	background: $yellowGradient;
+	overflow: hidden;
+}
+.map-container {
+    height: 50%;
+    width: 50%;
+    border-radius: 3%;
+    background-color: red;
+    overflow: hidden;
+}

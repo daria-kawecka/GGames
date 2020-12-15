@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Section from "../components/Section";
 import Crew from "../components/Crew";
 import Map from "../components/Map";
+import Location from "../components/location";
 
 const About = () => {
   return (
@@ -13,10 +14,11 @@ const About = () => {
       <section className="crewSection">
         <Crew></Crew>
       </section>
-      <section className="mapSection">
-        <div class="map-container">
+      <section className="locationSection">
+        {/* <div class="map-container">
           <Map></Map>
-        </div>
+        </div> */}
+        <Location></Location>
       </section>
     </>
   );
