@@ -1,54 +1,54 @@
 @import "__variables.scss";
 
 .crewSection {
-	height: 100vh;
-	background: $darkGradient;
-	position: relative;
-	top: -10%;
-	&__header {
-		color: $white;
-		font-size: 55px;
-		text-align: center;
-		font-weight: 700;
-	}
-	&__container {
-		display: flex;
-		margin: 10px 25px;
-		padding: 30px;
-		height: 65%;
-		justify-content: space-evenly;
-		align-items: center;
-		.crewSection__crewMember {
-			width: 22%;
-			height: 85%;
-			background: $yellowGradient;
-			border-radius: 11px;
-			transition: 0.5s linear;
-			text-align: center;
-			cursor: default;
-			&:hover {
-				box-shadow: 3px 2px 2px $white;
-			}
-			&--image {
-				width: 20vh;
-				height: 20vh;
-				margin: 15px;
-				background-color: rgb(29, 29, 29);
-				border-radius: 50%;
-			}
-			&--text {
-				font-size: 16px;
-				padding: 10px;
-			}
-			&--character {
-				display: block;
-				font-size: 24px;
-				font-weight: 500;
-				border-bottom: 1px solid rgb(29, 29, 29);
-			}
-		}
-	}
-	&__svg-wave {
-		@include svg;
-	}
+  height: 100vh;
+  background: $darkGradient;
+  position: relative;
+  top: -10%;
+  &__header {
+    color: $white;
+    font-size: 55px;
+    text-align: center;
+    font-weight: 700;
+  }
+  &__container {
+    display: flex;
+    margin: 10px 25px;
+    padding: 30px;
+    height: 65%;
+    justify-content: space-evenly;
+    align-items: center;
+    .crewSection__crewMember {
+      width: 22%;
+      height: 85%;
+      background: $yellowGradient;
+      border-radius: 11px;
+      transition: 0.5s linear;
+      text-align: center;
+      cursor: default;
+      &:hover {
+        box-shadow: 3px 2px 2px $white;
+      }
+      &--image {
+        width: 20vh;
+        height: 20vh;
+        margin: 15px;
+        background-color: rgb(29, 29, 29);
+        border-radius: 50%;
+      }
+      &--text {
+        font-size: 16px;
+        padding: 10px;
+      }
+      &--character {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        border-bottom: 1px solid rgb(29, 29, 29);
+      }
+    }
+  }
+  &__svg-wave {
+    @include svg;
+  }
 }
