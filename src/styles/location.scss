@@ -1,16 +1,48 @@
 @import "__variables.scss";
 
 .locationSection {
-    height: 100vh;
-	max-width: 100%;
-	position: relative;
-	background: $yellowGradient;
-	overflow: hidden;
-}
-.map-container {
-    height: 50%;
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
+  background: $yellowGradient;
+  overflow: hidden;
+  &__header {
+    color: $black;
+    font-size: 55px;
+    text-align: center;
+    font-weight: 700;
+    &--span {
+      letter-spacing: 3px;
+      color: $white;
+      text-shadow: 1px 1px 4px $black;
+    }
+  }
+  &__container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+  }
+  &__mapContainer {
     width: 50%;
-    border-radius: 3%;
-    background-color: red;
+    border-radius: 2%;
     overflow: hidden;
+  }
+  &__aboutLocation {
+    margin-right: 20%;
+    &--header {
+      font-size: 2.3rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    &--text {
+      font-size: 1.8rem;
+    }
+  }
+  &__svg-wave {
+    @include svg;
+    transform: scaleX(-1);
+  }
 }
