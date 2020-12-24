@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.0",
     "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.1",
+    "axios-hooks": "^2.2.0",
     "gsap": "file:gsap-bonus.tgz",
     "leaflet": "^1.7.1",
     "node-sass": "^4.14.1",
@@ -29,6 +31,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "localhost:3000",
   "browserslist": {
     "production": [
       ">0.2%",
