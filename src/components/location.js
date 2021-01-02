@@ -37,14 +37,14 @@ const Location = () => {
         <div className="locationSection__mapContainer">
           <Map></Map>
         </div>
-        <div class="locationSection__aboutLocation">
-          <p class="locationSection__aboutLocation--header">We're here!</p>
-          <p class="locationSection__aboutLocation--text">
+        <div className="locationSection__aboutLocation">
+          <p className="locationSection__aboutLocation--header">We're here!</p>
+          <p className="locationSection__aboutLocation--text">
             Budryka 3 <br />
             33-332 Kraków
           </p>
-          <p class="locationSection__aboutLocation--header">Hours</p>
-          <p class="locationSection__aboutLocation--text">
+          <p className="locationSection__aboutLocation--header">Hours</p>
+          <p className="locationSection__aboutLocation--text">
             To be honest... <br />
             24/7.
           </p>
