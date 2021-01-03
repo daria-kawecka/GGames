@@ -2,10 +2,43 @@
 
 .gamesStore__main {
   min-height: 100vh;
+  overflow: hidden;
   background: $darkGradient;
   p {
-    color: red;
+    color: $white;
   }
+  .games {
+    width: 90%;
+    // min-height: 90vh;
+    margin: 0px auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 80px;
+    &__gameContainer {
+      justify-self: center; // właściwość z grida nie z flexa
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: $yellowGradient;
+      padding: 15px 5px;
+      border-radius: 15px;
+      width: 80%;
+    }
+    &__name {
+      color: $black;
+      font-weight: bold;
+      font-size: 22px;
+    }
+    &__img {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
   .loading {
     display: flex;
     justify-content: space-evenly;

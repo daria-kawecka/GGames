@@ -22,7 +22,11 @@ const Games_Store = () => {
   return (
     <div className="gamesStore__main">
       {games.length > 0 ? (
-        games.map((game) => <Games key={game.id} {...game}></Games>)
+        <div className="games">
+          {games.map((game) => (
+            <Games key={game.id} {...game}></Games>
+          ))}
+        </div>
       ) : (
         <div className="loading">
           <svg className="loading__circle">
