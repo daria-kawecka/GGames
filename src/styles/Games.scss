@@ -1,0 +1,63 @@
+@import "__variables.scss";
+
+.gamesStore__main {
+  min-height: 100vh;
+  background: $darkGradient;
+  p {
+    color: red;
+  }
+  .loading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    height: 70vh;
+    margin: 0 auto;
+    position: relative;
+    &__circle {
+      animation: rotate 2s linear infinite;
+      width: 180px;
+      position: relative;
+      circle {
+        width: 100%;
+        height: 100%;
+        stroke: $yellow;
+        fill: none;
+        stroke-width: 12;
+        stroke-linecap: round;
+        stroke-dasharray: 350;
+        stroke-dashoffset: 220;
+        transform: translate(30px, 15px);
+        animation: loading 2.5s linear infinite;
+      }
+    }
+    &__text {
+      color: $yellow;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 30px;
+    }
+  }
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    stroke-dashoffset: 220;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  50.1% {
+    stroke-dashoffset: 440;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
