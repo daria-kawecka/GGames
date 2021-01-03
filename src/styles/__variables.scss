@@ -7,7 +7,9 @@ $darkGradient: linear-gradient(
 
 $white: rgb(237, 237, 237);
 $yellow: #ffcc00;
+$yellowWithOpacity: rgba(255, 204, 0, 0.82);
 $black: rgb(22, 24, 29);
+$blackWithOpacity: rgba(22, 24, 29, 0.8);
 @mixin svg {
   position: absolute;
   left: 0;
