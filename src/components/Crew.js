@@ -28,7 +28,7 @@ const Crew = () => {
         toggleActions: "play pause resume reset",
       },
     });
-    var targets = gsap.utils.toArray(elements); // konwersja na arrat
+    // var targets = gsap.utils.toArray(elements); // konwersja na arrat
 
     elements.forEach((element) => {
       let hover = gsap.to(element, {

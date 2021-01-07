@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Section from "../components/Section";
 import Crew from "../components/Crew";
-import Location from "../components/location";
+import Location from "../components/Location";
 
 const About = () => {
   return (

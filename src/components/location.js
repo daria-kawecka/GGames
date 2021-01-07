@@ -1,4 +1,4 @@
-import Map from "../components/Map";
+import Map from "./Map";
 import { ReactComponent as WaveBlack } from "../images/wave_black.svg";
 
 import { useRef, useEffect } from "react";
@@ -33,7 +33,7 @@ const Location = () => {
       <p className="locationSection__header">
         Find us <span className="locationSection__header--span">easily</span>
       </p>
-      <div class="locationSection__container" ref={scene}>
+      <div className="locationSection__container" ref={scene}>
         <div className="locationSection__mapContainer">
           <Map></Map>
         </div>
