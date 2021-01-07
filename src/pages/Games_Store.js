@@ -58,9 +58,11 @@ const Games_Store = () => {
           <form onSubmit={handleOnSubmit}>
             <input
               type="search"
+              id="Search"
               placeholder="Search..."
               value={searchTerm}
               onChange={changeSearchTerm}
+              class="gamesStore__main__search"
             ></input>
           </form>
           <div className="games">
