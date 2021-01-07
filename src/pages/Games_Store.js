@@ -38,9 +38,9 @@ const Games_Store = () => {
     if (searchTerm.length <= 1) getGames();
     if (searchTerm) {
       games.filter((game) => {
-        if (game.name.indexOf(searchTerm) > -1) temp.push(game);
-        // console.log("tymczasowy: ");
-        console.log(temp);
+        const name = game.name.toLowerCase();
+        const search = searchTerm.toLowerCase();
+        if (name.indexOf(search) > -1) temp.push(game);
         setCopyGames(temp);
       });
     }
@@ -62,7 +62,7 @@ const Games_Store = () => {
               placeholder="Search..."
               value={searchTerm}
               onChange={changeSearchTerm}
-              class="gamesStore__main__search"
+              className="gamesStore__main__search"
             ></input>
           </form>
           <div className="games">
