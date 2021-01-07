@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+//{ useEffect, useState }
 import "../styles/Games.scss";
 
-const Games = ({ name, image }) => {
+const Games = ({ name, image, id }) => {
   const img = image.medium_url;
   const desc = image.image_tags;
-  const price = Math.floor((Math.random() * 20 + 2) * 5);
+  const price = (id / 1000).toFixed(2);
   return (
     <>
       <div className="games__gameContainer">

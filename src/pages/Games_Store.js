@@ -2,44 +2,55 @@ import Games from "../components/Games.js";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import { ReactComponent as Wave } from "../images/wave.svg";
-
 const Games_Store = () => {
   const [games, setGames] = useState([]);
+  const [copyGames, setCopyGames] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const gamesApi =
-    "https://www.giantbomb.com/api/games/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&limit=30&format=json&sort=date_last_updated:desc";
+    "https://www.giantbomb.com/api/games/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&limit=20&format=json&sort=date_last_updated:desc";
 
   // dobry = https://www.giantbomb.com/api/games/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&limit=10&format=json
-  const searchApi =
-    "http://www.giantbomb.com/api/search/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&format=json&query=";
+
   const getGames = async () => {
     axios.get(gamesApi).then((response) => {
       setGames(response.data.results);
+      setCopyGames(games);
     });
   };
 
   useEffect(() => {
     getGames();
+    //setCopyGames(games);
   }, []);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
+    // if (searchTerm) {
+    //   games.filter((game) => {
+    //     if (game.name.includes(searchTerm)) setCopyGames([game]); //search on copy allows to get results from the basic games database
+    //   });
+    //}
+  };
+  const chandleSearch = (searchTerm) => {
+    let temp = [];
+    console.log(searchTerm.length);
+    if (searchTerm.length <= 1) getGames();
     if (searchTerm) {
-      axios.get(searchApi + searchTerm + "&resources=game").then((response) => {
-        console.log(searchTerm);
-        setGames(response.data.results);
+      games.filter((game) => {
+        if (game.name.indexOf(searchTerm) > -1) temp.push(game);
+        // console.log("tymczasowy: ");
+        console.log(temp);
+        setCopyGames(temp);
       });
-      setSearchTerm("");
     }
   };
-
   const changeSearchTerm = (e) => {
     setSearchTerm(e.target.value);
-    console.log(searchTerm);
+    chandleSearch(searchTerm);
   };
 
+  // console.log(games);
   return (
     <div className="gamesStore__main">
       {games.length > 0 ? (
@@ -53,9 +64,9 @@ const Games_Store = () => {
             ></input>
           </form>
           <div className="games">
-            {games.map((game) => (
-              <Games key={game.id} {...game}></Games>
-            ))}
+            {copyGames.length > 0
+              ? copyGames.map((game) => <Games key={game.id} {...game}></Games>)
+              : games.map((game) => <Games key={game.id} {...game}></Games>)}
           </div>
         </>
       ) : (
