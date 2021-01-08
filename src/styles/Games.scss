@@ -7,10 +7,51 @@
   p {
     color: $white;
   }
+  form {
+    position: relative;
+    background-color: #fff;
+  }
+  .form {
+    height: 40px;
+    width: 245px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    object-position: right;
+    box-shadow: $shadow;
+    &__search {
+      padding: 6px 12px;
+      width: 205px;
+      height: 100%;
+      font-weight: bold;
+      background-color: $blackWithOpacity;
+      border: 2px solid $yellowWithOpacity;
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+      color: $yellow;
+      outline: none;
+      &--button {
+        background-color: $yellowWithOpacity;
+        position: absolute;
+        right: 1px;
+        font-family: sans-serif;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        height: 100%;
+        width: 40px;
+        outline: none;
+      }
+      &--icon {
+        color: $blackWithOpacity;
+        font-size: 18px;
+      }
+    }
+  }
+
   .games {
     width: 90%;
-    // min-height: 90vh;
-    margin: 0px auto;
+    margin: 90px auto;
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -18,15 +59,17 @@
     &__gameContainer {
       overflow: hidden;
       display: flex;
-      margin: 25px;
+      margin-right: 40px;
+      margin-bottom: 40px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       position: relative;
       background: $yellowGradient;
       padding: 15px 0px 0px;
       border-radius: 15px;
-      box-shadow: 0 2px 20px -7px $white;
+      box-shadow: $shadow;
       width: 24%;
     }
 
@@ -39,7 +82,6 @@
       line-height: 30px;
       padding: 0 2% 0 2%;
       margin-top: 10px;
-      margin-bottom: 10px;
     }
     &__img {
       height: 450px;
