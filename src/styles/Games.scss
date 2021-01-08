@@ -75,12 +75,13 @@
     &__name {
       color: $black;
       text-align: center;
-      font-weight: bold;
-      font-size: 22px;
+      font-weight: 300;
+      font-size: 20px;
       height: 70px;
-      line-height: 70px;
+      line-height: 30px;
       vertical-align: middle;
       padding: 0 2% 0 2%;
+      text-shadow: 1px 1px 3px $white;
     }
     &__img {
       height: 450px;

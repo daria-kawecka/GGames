@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Games_Store = () => {
   const [games, setGames] = useState([]);
-  const [copyGames, setCopyGames] = useState([]);
+  const [filteredGames, setFilteredGames] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const gamesApi =
     "https://www.giantbomb.com/api/games/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&limit=20&format=json&sort=date_last_updated:desc";
@@ -14,43 +14,33 @@ const Games_Store = () => {
   const getGames = async () => {
     axios.get(gamesApi).then((response) => {
       setGames(response.data.results);
-      setCopyGames(games);
     });
   };
 
   useEffect(() => {
     getGames();
-    setCopyGames(games);
   }, []);
+
+  useEffect(() => {
+    setFilteredGames(
+      games.filter((game) => {
+        if (
+          game.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+          game.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        )
+          return game;
+      })
+    );
+  }, [searchTerm, games]);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
+  };
 
-    // if (searchTerm) {
-    //   games.filter((game) => {
-    //     if (game.name.includes(searchTerm)) setCopyGames([game]); //search on copy allows to get results from the basic games database
-    //   });
-    //}
-  };
-  const chandleSearch = (searchTerm) => {
-    let temp = [];
-    console.log(searchTerm.length);
-    if (searchTerm.length <= 1) getGames();
-    if (searchTerm) {
-      games.filter((game) => {
-        const name = game.name.toLowerCase();
-        const search = searchTerm.toLowerCase();
-        if (name.indexOf(search) > -1) temp.push(game);
-        setCopyGames(temp);
-      });
-    }
-  };
   const changeSearchTerm = (e) => {
     setSearchTerm(e.target.value);
-    chandleSearch(searchTerm);
   };
 
-  // console.log(games);
   return (
     <div className="gamesStore__main">
       {games.length > 0 ? (
@@ -70,9 +60,9 @@ const Games_Store = () => {
             </div>
           </form>
           <div className="games">
-            {copyGames.length > 0
-              ? copyGames.map((game) => <Games key={game.id} {...game}></Games>)
-              : games.map((game) => <Games key={game.id} {...game}></Games>)}
+            {filteredGames.map((game) => (
+              <Games key={game.id} {...game}></Games>
+            ))}
           </div>
         </>
       ) : (
