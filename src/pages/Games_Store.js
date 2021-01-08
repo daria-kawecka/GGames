@@ -20,7 +20,7 @@ const Games_Store = () => {
 
   useEffect(() => {
     getGames();
-    //setCopyGames(games);
+    setCopyGames(games);
   }, []);
 
   const handleOnSubmit = (e) => {
@@ -56,14 +56,18 @@ const Games_Store = () => {
       {games.length > 0 ? (
         <>
           <form onSubmit={handleOnSubmit}>
-            <input
-              type="search"
-              id="Search"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={changeSearchTerm}
-              className="gamesStore__main__search"
-            ></input>
+            <div className="form">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchTerm}
+                onChange={changeSearchTerm}
+                className="form__search"
+              ></input>
+              <button type="submit" className="form__search--button">
+                <i className="fa fa-search form__search--icon"></i>
+              </button>
+            </div>
           </form>
           <div className="games">
             {copyGames.length > 0
