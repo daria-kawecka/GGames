@@ -2,31 +2,39 @@ import React, { useState, useEffect } from "react";
 // 9b1015ef-1aac-48a2-855d-61e89b65e303 <--- token
 const Contact = () => {
   const [data, setData] = useState([]);
+  const [isFilled, setIsFilled] = useState(false);
 
   const formRefill = (e) => {
     const { name, value } = e.target;
     setData((prevData) => ({ ...prevData, [name]: value }));
   };
+  const validation = () => {
+    const { name, email, subject, content } = data;
+    if (name.length && email.length && subject.length && content.length) {
+      setIsFilled(true);
+    }
+  };
   console.log(data.subject);
   const sendEmail = (e) => {
-    e.preventDefault();
-
-    window.Email.send({
-      SecureToken: "9b1015ef-1aac-48a2-855d-61e89b65e303",
-      To: data.email,
-      From: "tutajtestuje@gmail.com",
-      Subject: data.subject,
-      Body: `<h1>Cześć</h1> ${data.name}!`,
-    }).then(alert("wysłano email"));
+    if (isFilled) {
+      window.Email.send({
+        SecureToken: "9b1015ef-1aac-48a2-855d-61e89b65e303",
+        To: data.email,
+        From: "tutajtestuje@gmail.com",
+        Subject: data.subject,
+        Body: `<h1>Cześć</h1> ${data.name}!`,
+      });
+      alert("Email został wysłany!!!");
+    }
   };
   const handleOnSubmit = (e) => {
-    e.preventDefault();
+    //e.preventDefault();
   };
 
   return (
     <>
       <h1>Contact page</h1>
-      <form onSubmit={handleOnSubmit}>
+      <form action="/contact" method="POST">
         <input
           type="text"
           name="name"
@@ -62,7 +70,9 @@ const Contact = () => {
           required
         ></textarea>
 
-        <button onClick={sendEmail}>Send</button>
+        <button type="submit" onClick={sendEmail}>
+          Send
+        </button>
       </form>
     </>
   );
