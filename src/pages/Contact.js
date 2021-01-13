@@ -9,8 +9,10 @@ const Contact = () => {
 	const formRefill = (e) => {
 		const { name, value } = e.target;
 		setData((prevData) => ({ ...prevData, [name]: value }));
-		setErrors(validate(data));
 	};
+	useEffect(() => {
+		setErrors(validate(data));
+	}, [data]);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
