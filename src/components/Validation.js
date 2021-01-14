@@ -1,5 +1,4 @@
 export default function validate(values) {
-	console.log("walidacja");
 	let email, name, subject, content;
 	let filled = false;
 	if (values.email && values.name && values.subject && values.content) {
@@ -8,8 +7,8 @@ export default function validate(values) {
 			email = "Email address is invalid...";
 			filled = false;
 		}
-		if (values.content.split(" ").length < 5) {
-			content = "Message should be longer than 5 words...";
+		if (values.content.split(" ").length < 5 && values.content.split(" ").length > 255) {
+			content = "Message should be longer than 5 words and shorter than 255...";
 			filled = false;
 		}
 	} else {
@@ -32,7 +31,6 @@ export default function validate(values) {
 			content = "Please write a message...";
 			filled = false;
 		} else if (values.content.split(" ").length <= 5 && values.content.split(" ").length > 255) {
-			console.log(values.content.split(" "));
 			content = "Message should be longer than 5 words and shorter than 255...";
 			filled = false;
 		}

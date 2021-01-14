@@ -1,9 +1,5 @@
 $yellowGradient: linear-gradient(180deg, #ffcc00 0%, #e8a60c 80%);
-$darkGradient: linear-gradient(
-  -90deg,
-  rgb(22, 24, 29) 0%,
-  rgb(10, 10, 10) 100%
-);
+$darkGradient: linear-gradient(-90deg, rgb(22, 24, 29) 0%, rgb(10, 10, 10) 100%);
 
 $white: rgb(237, 237, 237);
 $yellow: #ffcc00;
@@ -11,9 +7,12 @@ $yellowWithOpacity: rgba(255, 204, 0, 0.82);
 $black: rgb(22, 24, 29);
 $blackWithOpacity: rgba(22, 24, 29, 0.8);
 @mixin svg {
-  position: absolute;
-  left: 0;
-  bottom: 0%;
+	position: absolute;
+	left: 0;
+	bottom: 0%;
 }
-
+@mixin textShadow {
+	color: $white;
+	text-shadow: 1px 1px 4px $black;
+}
 $shadow: 0 2px 20px -7px $white;

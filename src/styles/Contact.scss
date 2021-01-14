@@ -1,0 +1,59 @@
+@import "__variables.scss";
+
+.contact {
+	overflow: hidden;
+
+	&__header {
+		text-align: center;
+		@include textShadow;
+		text-transform: uppercase;
+		margin: 15px;
+		&--span {
+			color: $yellow;
+			margin-right: 5px;
+			letter-spacing: 1.5px;
+			border-bottom: 3px solid $yellow;
+		}
+	}
+	&__formContainer {
+		background-color: $white;
+		border-radius: 8px;
+		width: 55%;
+		height: 60vh;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		box-shadow: $shadow;
+	}
+	&__form {
+		padding: 20px;
+		width: 60%;
+		height: 85%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		&__input,
+		&__textArea {
+			width: 95%;
+			// height: 6%;
+			outline: none;
+			border: none;
+			padding: 4px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+		}
+		&__textArea {
+			height: 45%;
+		}
+		&__svgContainer {
+			background: $yellowGradient;
+			width: 50%;
+			height: 100%;
+		}
+	}
+}
