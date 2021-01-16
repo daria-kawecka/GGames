@@ -26,6 +26,7 @@ const Form = () => {
 		const email1 = elements.getElementById("main_mail");
 		const email2 = elements.getElementById("mail1");
 		const email3 = elements.getElementById("mail3");
+		const paper = elements.getElementById("paper");
 		const message = document.querySelectorAll(".message");
 		const mobile = elements.getElementById("Mobile");
 		const form = document.getElementsByClassName("contact__formContainer");
@@ -34,7 +35,13 @@ const Form = () => {
 			.fromTo(form, { opacity: 0, x: -1000 }, { opacity: 1, x: 0, duration: 1.2 })
 			.to(mobile, { rotation: -2, transformOrigin: "center", yoyo: true, repeat: 3, duration: 0.1, ease: "power2.inOut" })
 			.to(mobile, { rotation: 0, transformOrigin: "center", yoyo: true, repeat: 3, duration: 0.1, ease: "power2.inOut" })
-			.from(message, { opacity: 1, transformOrigin: "center", stagger: { grid: "auto", each: -0.2, from: "bottom" } });
+			.addLabel("notifications")
+			.from(message, { opacity: 1, transformOrigin: "center", stagger: { each: -0.1, from: "bottom" } }, "notifications")
+			.fromTo(email2, { opacity: 0, x: -1000 }, { opacity: 1, x: 0, duration: 1 }, "notifications")
+			.fromTo(email3, { opacity: 0, x: 1000 }, { opacity: 1, x: 0, duration: 1 }, "notifications")
+			.fromTo(email1, { opacity: 0, y: -1000 }, { opacity: 1, y: 0, duration: 1 }, "notifications")
+			.to(paper, { opacity: 1, y: "-=2", scale: "1.04", duration: 0.2, delay: -0.3 })
+			.to(paper, { y: "0", scale: "1", duration: 0.4 });
 	});
 
 	const sendEmail = (e) => {
