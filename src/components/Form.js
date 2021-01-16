@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import validate from "../components/Validation";
 
-import { ReactComponent as Svg } from "../images/New Message_Two Color.svg";
+import { ReactComponent as Svg } from "../images/Email_SVG.svg";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "../styles/Contact.scss";
 
@@ -10,7 +12,7 @@ const Form = () => {
 	const [data, setData] = useState([]);
 	const [shouldShow, setShouldShow] = useState(false);
 	const [errors, setErrors] = useState("");
-
+	const scene = useRef(null);
 	const formRefill = (e) => {
 		const { name, value } = e.target;
 		setData((prevData) => ({ ...prevData, [name]: value }));
@@ -18,6 +20,22 @@ const Form = () => {
 	useEffect(() => {
 		setErrors(validate(data));
 	}, [data]);
+
+	useEffect(() => {
+		const elements = scene.current;
+		const email1 = elements.getElementById("main_mail");
+		const email2 = elements.getElementById("mail1");
+		const email3 = elements.getElementById("mail3");
+		const message = document.querySelectorAll(".message");
+		const mobile = elements.getElementById("Mobile");
+		const form = document.getElementsByClassName("contact__formContainer");
+		let tl = gsap.timeline({ delay: 0.5 });
+		tl.set([email1, email2, email3, message], { opacity: 0 })
+			.fromTo(form, { opacity: 0, x: -1000 }, { opacity: 1, x: 0, duration: 1.2 })
+			.to(mobile, { rotation: -2, transformOrigin: "center", yoyo: true, repeat: 3, duration: 0.1, ease: "power2.inOut" })
+			.to(mobile, { rotation: 0, transformOrigin: "center", yoyo: true, repeat: 3, duration: 0.1, ease: "power2.inOut" })
+			.from(message, { opacity: 1, transformOrigin: "center", stagger: { grid: "auto", each: -0.2, from: "bottom" } });
+	});
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -46,6 +64,7 @@ const Form = () => {
 		<>
 			<div className="contact__formContainer">
 				<form className="contact__form">
+					<i className="contact__form__icon far fa-envelope"></i>
 					<input type="text" name="name" placeholder="Your name..." onChange={formRefill} required className="contact__form__input" />
 					{shouldShow && errors && <p className="contact__form__error">{errors.name}</p>}
 					<input type="email" placeholder="Your email..." name="email" onChange={formRefill} required className="contact__form__input" />
@@ -61,7 +80,7 @@ const Form = () => {
 					</button>
 				</form>
 				<div className="contact__form__svgContainer">
-					<Svg></Svg>
+					<Svg ref={scene}></Svg>
 				</div>
 			</div>
 		</>
