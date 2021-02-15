@@ -8,7 +8,7 @@ export default function validate(values) {
       filled = false;
     }
     if (
-      values.content.split(" ").length < 5 &&
+      values.content.split(" ").length < 5 ||
       values.content.split(" ").length > 255
     ) {
       content = "Message should be longer than 5 words and shorter than 255...";
@@ -34,7 +34,7 @@ export default function validate(values) {
       content = "Please write a message...";
       filled = false;
     } else if (
-      values.content.split(" ").length <= 5 &&
+      values.content.split(" ").length <= 5 ||
       values.content.split(" ").length > 255
     ) {
       content = "Message should be longer than 5 words and shorter than 255...";
