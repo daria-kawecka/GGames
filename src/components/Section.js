@@ -26,26 +26,30 @@ const Section = () => {
     });
 
     parallaxInstance.friction(0.15, 0.15);
-    parallaxInstance.origin(0.5, 1);
+    // parallaxInstance.origin(0.5, 1);
 
     // gsap animation
     const fire = svg.getElementById("fire");
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({ delay: 1.5 });
     tl.addLabel("show", "0");
-    tl.fromTo(
+    tl.from(
       text,
-      { x: "+=800", opacity: 0.5 },
       {
-        x: "0",
-        opacity: 1,
-        scrollTrigger: { trigger: text, start: "top bottom", scrub: 1 },
+        x: 900,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: text,
+          start: "top bottom",
+          toggleActions: "play pause resume reset",
+        },
       },
       "show"
     )
       .fromTo(
         svg,
-        { opacity: 0.5 },
+        { opacity: 0 },
         {
           opacity: 1,
           duration: 1,
