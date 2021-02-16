@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import validate from "../components/Validation";
 
 import { ReactComponent as Svg } from "../images/Email_SVG.svg";
-import { ReactComponent as Email_Sent } from "../images/sent_email.svg";
+import { ReactComponent as EmailSent } from "../images/sent_email.svg";
 import { gsap } from "gsap";
 
 import "../styles/Contact.scss";
@@ -114,20 +114,19 @@ const Form = () => {
     if (errors.filled) {
       //send confirmation email
       window.Email.send({
-        SecureToken: "9b1015ef-1aac-48a2-855d-61e89b65e303",
+        SecureToken: "0fa8857a-ce78-47bc-acc4-93e9021bebf0",
         To: data.email,
         From: "tutajtestuje@gmail.com",
-        Subject: "Dzięki za podesłanie emaila!!!",
-        Body: `<h1>Cześć</h1> ${data.name}!`,
+        Subject: "[GGames] Dzięki za podesłanie emaila!!!",
+        Body: `<h3>Cześć ${data.name}!</h3> Twój e-mail został doręczony do siedziby GGames. Wkrótce ktoś się z Tobą skontaktuje. Pozdrawiamy, zespół <i>GGames</i>. `,
       }); //send email
       window.Email.send({
-        SecureToken: "9b1015ef-1aac-48a2-855d-61e89b65e303",
+        SecureToken: "0fa8857a-ce78-47bc-acc4-93e9021bebf0",
         To: "tutajtestuje@gmail.com",
         From: "tutajtestuje@gmail.com",
-        Subject: data.subject,
-        Body: `<h1>Cześć</h1> Nadawca:${data.name} Email:${data.email} Treść: ${data.content} Numer tel: ${data.number}!`,
-      });
-      alert("Email has been sent!!!");
+        Subject: "Nowy email od : " + data.email,
+        Body: `<b>Imię:</b> ${data.name} <b>email:</b> ${data.name} <b>temat:</b> ${data.subject} <b>numer telefonu:</b> ${data.number} <b>strona:</b> ${data.web} <b>wiadomość:</b> ${data.content}`,
+      }).then(alert("Email has been sent!!!"));
       setIsSent(true); // for display confirmation
       setErrors("");
     }
@@ -143,7 +142,7 @@ const Form = () => {
                 successfully
               </span>
             </p>
-            <Email_Sent className="contact__infoContainer__infoSvg"></Email_Sent>
+            <EmailSent className="contact__infoContainer__infoSvg"></EmailSent>
           </div>
         )}
         <form

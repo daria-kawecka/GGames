@@ -7,7 +7,7 @@
     text-align: center;
     @include textShadow;
     text-transform: uppercase;
-    margin: 15px;
+    margin: 2%;
     &--span {
       color: $yellow;
       margin-right: 5px;
@@ -23,6 +23,7 @@
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s;
+
     &__infoText {
       text-align: center;
       text-shadow: $shadow;
@@ -41,6 +42,7 @@
     border-radius: 8px;
     width: 55%;
     height: 63%;
+    margin-top: 4%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,6 +51,9 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: $shadow;
+    @include square {
+      width: 70%;
+    }
   }
 
   &__form {
@@ -62,7 +67,28 @@
     &--disabled {
       display: none;
     }
-
+    @include square {
+      .contact__form {
+        &__icon {
+          font-size: 38px;
+          margin: 5px;
+        }
+        &__input,
+        &__textArea {
+          font-size: 16px;
+        }
+        &__textArea {
+          height: 38%;
+          resize: none;
+        }
+        &__button {
+          font-size: 22px;
+        }
+        &__error {
+          font-size: 15px;
+        }
+      }
+    }
     &__icon {
       margin: 10px;
       font-size: 30px;

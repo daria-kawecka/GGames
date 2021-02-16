@@ -15,7 +15,7 @@ const Map = () => {
   });
   return (
     <MapContainer
-      style={{ height: "40vh", width: "40vw" }}
+      style={{ height: "100%", width: "100%" }}
       center={center}
       zoom={20}
       scrollWheelZoom={true}
@@ -26,7 +26,7 @@ const Map = () => {
       />
       <Marker position={center} icon={markerIcon}>
         <Popup>
-          Kox akademik <br /> Pozdro 406!
+          The company's headquarters <br /> Just for now
         </Popup>
       </Marker>
     </MapContainer>

@@ -16,9 +16,10 @@ const Section = () => {
   useEffect(() => {
     const element = scene.current;
     const svg = animation.current;
-    const text = rightSide.current;
+    const text = [rightSide.current];
     const rocket = svg.getElementById("rocket");
-
+    svg.removeAttribute("display");
+    console.log(svg, svg.data);
     // parralax:
     const parallaxInstance = new Parallax(element, {
       relativeInput: true,
@@ -26,7 +27,7 @@ const Section = () => {
     });
 
     parallaxInstance.friction(0.15, 0.15);
-    // parallaxInstance.origin(0.5, 1);
+    parallaxInstance.origin(0.5, 1);
 
     // gsap animation
     const fire = svg.getElementById("fire");
@@ -36,13 +37,13 @@ const Section = () => {
     tl.from(
       text,
       {
-        x: 900,
+        x: 1000,
         opacity: 0,
         duration: 1,
         scrollTrigger: {
           trigger: text,
           start: "top bottom",
-          toggleActions: "play pause resume reset",
+          toggleActions: "restart none none reset",
         },
       },
       "show"
@@ -109,6 +110,7 @@ const Section = () => {
       </div>
       <div
         className="aboutSection__parallaxContainer"
+        display="inline !important"
         ref={scene}
         data-friction-x="0.7"
       >

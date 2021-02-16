@@ -1,58 +1,83 @@
 @import "__variables.scss";
 
 .locationSection {
-	height: 100vh;
-	max-width: 100%;
-	position: relative;
-	background: $yellowGradient;
-	overflow: hidden;
-	&__header {
-		color: $black;
-		font-size: 55px;
-		text-align: center;
-		font-weight: 700;
-		&--span {
-			letter-spacing: 3px;
-			color: $white;
-			@include textShadow;
-		}
-	}
-	&__container {
-		width: 80%;
-		height: 40%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 2% auto;
-	}
-	&__mapContainer {
-		width: 50%;
-		height: 100%;
-		border-radius: 2%;
-		overflow: hidden;
-		box-shadow: 1px 1px 7px $black;
-	}
-	&__aboutLocation {
-		// margin-right: 20%;
-		width: 42%;
-		height: 90%;
-		border-radius: 3%;
-		text-align: center;
-		background: $darkGradient;
-		color: $white;
-		padding: 15px;
-		&--header {
-			font-size: 2.3rem;
-			text-transform: uppercase;
-			font-weight: bold;
-			letter-spacing: 2px;
-		}
-		&--text {
-			font-size: 1.8rem;
-		}
-	}
-	&__svg-wave {
-		@include svg;
-		transform: scaleX(-1);
-	}
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
+  background: $yellowGradient;
+  overflow: hidden;
+  @include square {
+    .locationSection {
+      &__container {
+        width: 92%;
+      }
+      &__mapContainer {
+        width: 74%;
+        height: 100%;
+        margin-right: 5%;
+      }
+      &__aboutLocation {
+        width: 49%;
+        &--header {
+          font-size: 2.3rem;
+        }
+        &--text {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+  &__header {
+    color: $black;
+    font-size: 55px;
+    text-align: center;
+    font-weight: 700;
+    &--span {
+      letter-spacing: 3px;
+      color: $white;
+      @include textShadow;
+    }
+  }
+  &__container {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% auto;
+  }
+  &__mapContainer {
+    width: 50%;
+    height: 100%;
+    border-radius: 2%;
+    overflow: hidden;
+    box-shadow: 1px 1px 7px $black;
+  }
+  &__aboutLocation {
+    width: 42%;
+    height: 95%;
+    border-radius: 4%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $darkGradient;
+    color: $white;
+    cursor: default;
+
+    &--header {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      padding: 1%;
+    }
+    &--text {
+      font-size: 1.5rem;
+    }
+  }
+  &__svg-wave {
+    @include svg;
+    transform: scaleX(-1);
+  }
 }

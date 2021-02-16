@@ -1,48 +1,52 @@
 @import "__variables.scss";
 
 .header {
-	position: relative;
-	height: calc(100vh - 80px);
-	padding-top: 25px;
-	overflow-y: hidden;
-	display: grid;
-	grid-template-columns: 1.5fr 0.7fr;
-	grid-template-rows: 50% 50%;
-	grid-template-areas:
-		"svg h1"
-		"wave wave";
-	grid-gap: 5px 5px;
-	background: $darkGradient;
-	align-items: start;
-	overflow: hidden;
-	&__svg-game {
-		width: 100%;
-		height: 160%;
-		grid-area: svg;
-		position: relative;
-		left: -15%;
-		top: 0%;
-	}
-	&__text {
-		grid-area: h1;
-		cursor: context-menu;
-		align-self: center;
-		justify-self: start;
-		// margin: 0 auto;
-	}
-	&__text h1 {
-		font-size: 70px;
-		font-weight: 700;
-		color: rgb(237, 237, 237);
-		// margin: 0 auto;
-	}
-	&__text span {
-		font-size: 80px;
-		color: #ffcc00;
-	}
-	&__svg-wave {
-		grid-area: wave;
-		@include svg;
-		// background-color: blue;
-	}
+  position: relative;
+  height: calc(100vh - 80px);
+  padding-top: 25px;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "svg h1"
+    "wave wave";
+  grid-gap: 5px 5px;
+  background: $darkGradient;
+  align-items: start;
+  overflow: hidden;
+  &__svg-game {
+    width: 100%;
+    height: 120%;
+    grid-area: svg;
+    position: relative;
+    left: -15%;
+    top: 0%;
+    @include square {
+      left: -10%;
+      top: 5%;
+    }
+  }
+  &__text {
+    grid-area: h1;
+    cursor: context-menu;
+    align-self: center;
+    justify-self: start;
+    // margin: 0 auto;
+  }
+  &__text h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: rgb(237, 237, 237);
+    // margin: 0 auto;
+  }
+  &__text span {
+    font-size: 80px;
+    color: #ffcc00;
+  }
+  &__svg-wave {
+    grid-area: wave;
+    @include svg;
+    // background-color: blue;
+  }
 }

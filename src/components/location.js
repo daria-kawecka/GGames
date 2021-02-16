@@ -45,8 +45,7 @@ const Location = () => {
           </p>
           <p className="locationSection__aboutLocation--header">Hours</p>
           <p className="locationSection__aboutLocation--text">
-            To be honest... <br />
-            24/7.
+            To be honest... 24/7
           </p>
         </div>
       </div>

@@ -1,5 +1,9 @@
 $yellowGradient: linear-gradient(180deg, #ffcc00 0%, #e8a60c 80%);
-$darkGradient: linear-gradient(-90deg, rgb(22, 24, 29) 0%, rgb(10, 10, 10) 100%);
+$darkGradient: linear-gradient(
+  -90deg,
+  rgb(22, 24, 29) 0%,
+  rgb(10, 10, 10) 100%
+);
 
 $white: rgb(237, 237, 237);
 $yellow: #ffcc00;
@@ -7,12 +11,40 @@ $yellowWithOpacity: rgba(255, 204, 0, 0.82);
 $black: rgb(22, 24, 29);
 $blackWithOpacity: rgba(22, 24, 29, 0.8);
 @mixin svg {
-	position: absolute;
-	left: 0;
-	bottom: 0%;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
 }
 @mixin textShadow {
-	color: $white;
-	text-shadow: 1px 1px 4px $black;
+  color: $white;
+  text-shadow: 1px 1px 4px $black;
 }
 $shadow: 0 2px 20px -7px $white;
+
+// RWD breakpoints
+
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// // Large tablets and desktops
+// $screen-xl-max: 1200px;
+
+// laptops
+$screen-xl-max: 1367px;
+
+@mixin xl {
+  @media only screen and (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+@mixin square {
+  @media only screen and (max-width: 1280px) and (max-height: 1024px) {
+    @content;
+  }
+}
