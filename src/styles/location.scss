@@ -6,27 +6,6 @@
   position: relative;
   background: $yellowGradient;
   overflow: hidden;
-  @include square {
-    .locationSection {
-      &__container {
-        width: 92%;
-      }
-      &__mapContainer {
-        width: 74%;
-        height: 100%;
-        margin-right: 5%;
-      }
-      &__aboutLocation {
-        width: 49%;
-        &--header {
-          font-size: 2.3rem;
-        }
-        &--text {
-          font-size: 1.7rem;
-        }
-      }
-    }
-  }
   &__header {
     color: $black;
     font-size: 55px;
@@ -51,7 +30,7 @@
     height: 100%;
     border-radius: 2%;
     overflow: hidden;
-    box-shadow: 1px 1px 7px $black;
+    box-shadow: $bshadow;
   }
   &__aboutLocation {
     width: 42%;
@@ -63,6 +42,7 @@
     justify-content: center;
     background: $darkGradient;
     color: $white;
+    box-shadow: $bshadow;
     cursor: default;
 
     &--header {
@@ -79,5 +59,77 @@
   &__svg-wave {
     @include svg;
     transform: scaleX(-1);
+  }
+}
+
+@include square {
+  .locationSection {
+    &__container {
+      width: 92%;
+    }
+    &__mapContainer {
+      width: 74%;
+      height: 100%;
+      margin-right: 5%;
+    }
+    &__aboutLocation {
+      width: 49%;
+      &--header {
+        font-size: 2.3rem;
+      }
+      &--text {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@include tablet_portrait {
+  .locationSection {
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+    background: $yellowGradient;
+    overflow: hidden;
+    &__header {
+      color: $black;
+      font-size: 50px;
+      text-align: center;
+      font-weight: 700;
+      &--span {
+        letter-spacing: 3px;
+        color: $white;
+        @include textShadow;
+      }
+    }
+    &__container {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 2% 0;
+    }
+    &__mapContainer {
+      width: 80%;
+      height: 50%;
+      border-radius: 2%;
+      margin-right: 0;
+      overflow: hidden;
+      box-shadow: 1px 1px 7px $black;
+    }
+    &__aboutLocation {
+      width: 80%;
+      height: 40%;
+      border-radius: 6%;
+
+      &--header {
+        font-size: 2.1rem;
+      }
+      &--text {
+        font-size: 1.6rem;
+      }
+    }
   }
 }

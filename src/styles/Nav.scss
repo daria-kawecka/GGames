@@ -1,7 +1,7 @@
 @import "__variables.scss";
 .nav {
   box-sizing: border-box;
-  background: linear-gradient(90deg, rgb(10, 10, 10) 0%, rgb(22, 24, 29) 100%);
+  background: $darkGradient;
   width: 100vw;
   height: 80px;
   color: white;
@@ -24,6 +24,9 @@
     justify-content: center;
     align-items: center;
     width: 9%;
+    @include xl {
+      font-size: 28px;
+    }
     &__svg {
       width: 46%;
       margin-right: 8px;
@@ -55,6 +58,9 @@
         align-content: center;
         transition: 0.4s linear;
         border-radius: 12px;
+        @include xl {
+          font-size: 20px;
+        }
         @include square {
           font-size: 20px;
         }
@@ -77,6 +83,26 @@
   }
 }
 
+@include tablet_portrait {
+  .nav {
+    padding: 15px;
+    &__logo-link {
+      width: 17%;
+      font-size: 30px;
+      padding: 10px;
+      margin-left: 15px;
+    }
+    & .navbar__item {
+      margin: 10px;
+      min-height: 50px;
+      &-link {
+        font-size: 20px;
+        margin: 10px;
+      }
+    }
+  }
+}
+
 @media (min-width: 600px) {
   .nav__hamburger {
     display: none;
@@ -91,7 +117,6 @@
     flex-wrap: wrap;
     padding: 10px;
     min-height: 80px;
-    height: 100vh;
     max-width: 600px;
     margin-top: 15px;
 
@@ -100,6 +125,7 @@
       width: 50px;
       color: $yellow;
       font-size: 30px;
+      z-index: 200;
       display: inline;
       &__svg {
         display: none;
@@ -109,6 +135,7 @@
       display: inline;
       font-size: 30px;
       height: 50px;
+      z-index: 200;
     }
     .navbar {
       display: none;
@@ -117,6 +144,8 @@
       &--mobile {
         position: absolute;
         overflow: hidden;
+        // margin-top: 35px;
+        z-index: 100;
         width: 100%;
         height: 100%;
         display: flex;
@@ -124,6 +153,7 @@
         align-items: center;
         justify-content: center;
         list-style: none;
+        background: $darkGradient;
       }
 
       &__item {
@@ -137,7 +167,6 @@
         position: static;
         .submenu {
           top: -10px;
-          // width: calc(100% + 50px);
           margin-bottom: 19px;
         }
         &-link {

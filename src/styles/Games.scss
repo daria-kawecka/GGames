@@ -188,3 +188,71 @@
     transform: rotate(360deg);
   }
 }
+
+@include tablet_portrait {
+  .gamesStore__main {
+    .form {
+      height: 50px;
+      width: 270px;
+      &__search {
+        width: 220px;
+        border-radius: 8px 0 0 8px;
+        font-size: 16px;
+        &--button {
+          border-radius: 0 8px 8px 0;
+          width: 50px;
+        }
+        &--icon {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .games {
+      width: 100%;
+      margin: 90px 0;
+      &__gameContainer {
+        margin-right: 0px;
+        margin-bottom: 60px;
+        border-radius: 18px;
+        width: 45%;
+      }
+      &__name {
+        font-weight: 300;
+        font-size: 21px;
+        height: 75px;
+        line-height: 32px;
+      }
+      &__price {
+        &__text,
+        &__money {
+          font-size: 1.4rem;
+        }
+        &__money {
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .loading {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 90%;
+      height: 80vh;
+      &__circle {
+        width: 200px;
+        circle {
+          stroke-width: 10;
+          stroke-dasharray: 350;
+          stroke-dashoffset: 210;
+          transform: translate(45px, 10px);
+        }
+      }
+      &__text {
+        font-size: 33px;
+      }
+    }
+  }
+}

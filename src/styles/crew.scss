@@ -43,7 +43,9 @@
         font-size: 1vw;
         padding: 0 5%;
         @include xl {
-          font-size: 1.2vw;
+          & {
+            font-size: 1.2vw;
+          }
         }
         @include square {
           font-size: 1.5vw;
@@ -65,5 +67,43 @@
   }
   &__svg-wave {
     @include svg;
+  }
+}
+
+@include tablet_portrait {
+  .crewSection {
+    height: 115vh;
+    top: 0%;
+    &__header {
+      font-size: 50px;
+      margin-top: -18px;
+    }
+    &__container {
+      top: 6%;
+      margin: 0px;
+      padding: 0px;
+      height: 83%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .crewSection__crewMember {
+        width: 52%;
+        height: 30%;
+        background: $yellowGradient;
+        &--image {
+          width: 8vh;
+          height: 8vh;
+          margin: 1%;
+        }
+        &--text {
+          font-size: 2.2vw;
+          padding: 0 5%;
+        }
+        &--character {
+          font-size: 2.8vw;
+        }
+      }
+    }
   }
 }

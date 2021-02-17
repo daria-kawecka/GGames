@@ -20,11 +20,6 @@
     color: $white;
     padding: 40px;
     border-radius: 15px;
-    @include square {
-      top: 5%;
-      width: 52%;
-      margin: 30px;
-    }
     &__header {
       font-size: 3rem;
     }
@@ -56,5 +51,74 @@
   &__svg-wave {
     @include svg;
     transform: scaleX(-1);
+  }
+}
+
+@include square {
+  .aboutSection {
+    &__textContainer {
+      top: 5%;
+      width: 58%;
+      margin: 30px;
+      &__header {
+        font-size: 3.2rem;
+      }
+      &__text {
+        margin-top: 10px;
+        font-size: 1.4rem;
+        text-align: left;
+      }
+    }
+    &__parallaxContainer {
+      height: 70%;
+      &__svg {
+        width: 96%;
+        height: 110%;
+      }
+    }
+  }
+}
+
+@include tablet_portrait {
+  .aboutSection {
+    height: 100vh;
+    max-width: 100%;
+    position: relative;
+    background: $yellowGradient;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__textContainer {
+      top: -5%;
+      right: 0;
+      width: 90%;
+      height: 42%;
+      margin: 0px;
+      padding: 40px;
+      box-shadow: $bshadow;
+      &__header {
+        font-size: 2.5em;
+        margin-top: -10px;
+      }
+      &__text {
+        margin-top: 8px;
+        font-size: 1.4em;
+        text-align: left;
+      }
+    }
+    &__parallaxContainer {
+      align-self: flex-start;
+      top: -5%;
+      height: 36%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      &__svg {
+        width: 96%;
+        height: 110%;
+      }
+    }
   }
 }

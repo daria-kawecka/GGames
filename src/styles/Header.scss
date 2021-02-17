@@ -38,7 +38,6 @@
     font-size: 70px;
     font-weight: 700;
     color: rgb(237, 237, 237);
-    // margin: 0 auto;
   }
   &__text span {
     font-size: 80px;
@@ -47,6 +46,36 @@
   &__svg-wave {
     grid-area: wave;
     @include svg;
-    // background-color: blue;
+  }
+}
+
+@include tablet_portrait {
+  .header {
+    height: calc(88vh - 70px);
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 50% 50%;
+    .header__svg-game {
+      width: 90%;
+      height: 110%;
+      left: 5%;
+      top: 10%;
+    }
+    &__text {
+      grid-area: h1;
+      align-self: center;
+      justify-self: center;
+    }
+    &__text h1 {
+      font-size: 80px;
+      font-weight: 700;
+    }
+    &__text span {
+      font-size: 80px;
+      color: #ffcc00;
+    }
+    &__svg-wave {
+      grid-area: wave;
+      @include svg;
+    }
   }
 }

@@ -2,7 +2,8 @@
 
 .contact {
   overflow: hidden;
-
+  height: 100vh;
+  max-height: 100vh;
   &__header {
     text-align: center;
     @include textShadow;
@@ -23,7 +24,6 @@
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s;
-
     &__infoText {
       text-align: center;
       text-shadow: $shadow;
@@ -51,9 +51,6 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: $shadow;
-    @include square {
-      width: 70%;
-    }
   }
 
   &__form {
@@ -67,28 +64,7 @@
     &--disabled {
       display: none;
     }
-    @include square {
-      .contact__form {
-        &__icon {
-          font-size: 38px;
-          margin: 5px;
-        }
-        &__input,
-        &__textArea {
-          font-size: 16px;
-        }
-        &__textArea {
-          height: 38%;
-          resize: none;
-        }
-        &__button {
-          font-size: 22px;
-        }
-        &__error {
-          font-size: 15px;
-        }
-      }
-    }
+
     &__icon {
       margin: 10px;
       font-size: 30px;
@@ -170,6 +146,87 @@
       text-align: left;
       font-size: 13px;
       font-weight: 600;
+    }
+  }
+}
+
+@include square {
+  .contact__form {
+    &__icon {
+      font-size: 38px;
+      margin: 5px;
+    }
+    &__input,
+    &__textArea {
+      font-size: 16px;
+    }
+    &__textArea {
+      height: 38%;
+      resize: none;
+    }
+    &__button {
+      font-size: 22px;
+    }
+    &__error {
+      font-size: 15px;
+    }
+  }
+  .contact__formContainer {
+    width: 70%;
+  }
+}
+
+@include tablet_portrait {
+  .contact {
+    width: 100%;
+    &__header {
+      margin: 5%;
+    }
+    &__infoContainer {
+      width: 55%;
+      height: 100%;
+      margin-top: 10%;
+      &__infoText {
+        font-size: 20px;
+      }
+      &__infoSvg {
+        width: 85%;
+      }
+    }
+    &__formContainer {
+      width: 90%;
+      height: 55%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-48%, -50%);
+    }
+    &__form {
+      width: 65%;
+      height: 100%;
+      &__icon {
+        font-size: 33px;
+      }
+      &__input,
+      &__textArea {
+        max-width: 99%;
+        width: 99%;
+      }
+      &__svgContainer {
+        background: $yellowGradient;
+        width: 45%;
+        svg {
+          height: 44%;
+        }
+      }
+      &__button {
+        margin-top: 12px;
+        font-size: 18px;
+        padding: 3px 12px;
+      }
+      &__error {
+        width: 99%;
+        font-size: 15px;
+      }
     }
   }
 }
