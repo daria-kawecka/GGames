@@ -107,6 +107,39 @@
   }
 }
 
+@include tablet_sm {
+  .crewSection {
+    height: 125vh;
+    top: 0%;
+    &__header {
+      font-size: 50px;
+      margin-top: -18px;
+    }
+    &__container {
+      top: 6%;
+      margin: 0px;
+      padding: 0px;
+      height: 82%;
+      .crewSection__crewMember {
+        width: 50%;
+        height: 28%;
+        &--image {
+          width: 8vh;
+          height: 8vh;
+          margin-top: 1%;
+        }
+        &--text {
+          font-size: 0.87rem;
+          padding: 0 4%;
+        }
+        &--character {
+          font-size: 2.6vw;
+        }
+      }
+    }
+  }
+}
+
 @include mobile_sm_max {
   .crewSection {
     height: 120vh;

@@ -20,6 +20,7 @@
     color: $white;
     padding: 40px;
     border-radius: 15px;
+    box-shadow: $bshadow;
     &__header {
       font-size: 3rem;
     }
@@ -42,10 +43,6 @@
       left: 0px !important;
       width: 110%;
       height: 120%;
-      @include square {
-        width: 96%;
-        height: 110%;
-      }
     }
   }
   &__svg-wave {
@@ -57,22 +54,25 @@
 @include square {
   .aboutSection {
     &__textContainer {
-      top: 5%;
-      width: 58%;
-      margin: 30px;
+      top: 0;
+      right: 0;
+      width: 75%;
+      height: 67%;
+      margin: 20px;
+      padding: 35px;
       &__header {
-        font-size: 3.2rem;
+        font-size: 4vw;
       }
       &__text {
-        margin-top: 10px;
-        font-size: 1.4rem;
+        margin-top: 8px;
+        font-size: 1.25em;
         text-align: left;
       }
     }
     &__parallaxContainer {
-      height: 70%;
+      height: 75%;
       &__svg {
-        width: 96%;
+        width: 110%;
         height: 110%;
       }
     }
@@ -118,6 +118,25 @@
       &__svg {
         width: 96%;
         height: 110%;
+      }
+    }
+  }
+}
+
+@include tablet_sm {
+  .aboutSection {
+    &__textContainer {
+      top: -5%;
+      padding: 35px;
+      box-shadow: $bshadow;
+      &__header {
+        font-size: 2.1em;
+        margin-top: -15px;
+      }
+      &__text {
+        margin-top: 8px;
+        font-size: 1.2em;
+        text-align: left;
       }
     }
   }

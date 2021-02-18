@@ -45,8 +45,20 @@ $screen-xl-max: 1367px;
   }
 }
 
+@mixin tablet_l {
+  @media only screen and (max-width: #{$second-screen-tablet}) {
+    @content;
+  }
+}
+
 @mixin tablet_portrait {
   @media only screen and (max-width: #{$screen-tablet}) and (max-height: #{$second-screen-tablet}) {
+    @content;
+  }
+}
+
+@mixin tablet_sm {
+  @media only screen and (max-width: #{$screen-tablet}) {
     @content;
   }
 }
