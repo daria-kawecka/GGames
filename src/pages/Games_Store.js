@@ -9,8 +9,6 @@ const Games_Store = () => {
   const gamesApi =
     "https://www.giantbomb.com/api/games/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&limit=20&format=json&sort=date_last_updated:desc";
 
-  // dobry = https://www.giantbomb.com/api/games/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&limit=10&format=json
-
   const getGames = async () => {
     axios.get(gamesApi).then((response) => {
       setGames(response.data.results);
