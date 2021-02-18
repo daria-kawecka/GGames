@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/GGames/static/css/main.230e7785.chunk.css",
+    "main.js": "/GGames/static/js/main.6963c165.chunk.js",
+    "main.js.map": "/GGames/static/js/main.6963c165.chunk.js.map",
+    "runtime-main.js": "/GGames/static/js/runtime-main.33351c6d.js",
+    "runtime-main.js.map": "/GGames/static/js/runtime-main.33351c6d.js.map",
+    "static/js/2.b70848c9.chunk.js": "/GGames/static/js/2.b70848c9.chunk.js",
+    "static/js/2.b70848c9.chunk.js.map": "/GGames/static/js/2.b70848c9.chunk.js.map",
+    "index.html": "/GGames/index.html",
+    "static/css/main.230e7785.chunk.css.map": "/GGames/static/css/main.230e7785.chunk.css.map",
+    "static/js/2.b70848c9.chunk.js.LICENSE.txt": "/GGames/static/js/2.b70848c9.chunk.js.LICENSE.txt",
+    "static/media/Email_SVG.b70762fb.svg": "/GGames/static/media/Email_SVG.b70762fb.svg",
+    "static/media/Startup_SVG.c63dd064.svg": "/GGames/static/media/Startup_SVG.c63dd064.svg",
+    "static/media/controller.0aa0698c.svg": "/GGames/static/media/controller.0aa0698c.svg",
+    "static/media/harry-potter.032aed81.svg": "/GGames/static/media/harry-potter.032aed81.svg",
+    "static/media/junior.63cb8ffe.svg": "/GGames/static/media/junior.63cb8ffe.svg",
+    "static/media/pirate.7bcbade9.svg": "/GGames/static/media/pirate.7bcbade9.svg",
+    "static/media/sent_email.2346ff9f.svg": "/GGames/static/media/sent_email.2346ff9f.svg",
+    "static/media/vr.c60cec1e.svg": "/GGames/static/media/vr.c60cec1e.svg",
+    "static/media/wave.dbe9a7c8.svg": "/GGames/static/media/wave.dbe9a7c8.svg",
+    "static/media/wave_black.63f4dbdd.svg": "/GGames/static/media/wave_black.63f4dbdd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33351c6d.js",
+    "static/js/2.b70848c9.chunk.js",
+    "static/css/main.230e7785.chunk.css",
+    "static/js/main.6963c165.chunk.js"
+  ]
+}
