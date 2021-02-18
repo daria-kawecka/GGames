@@ -196,9 +196,6 @@
     &__formContainer {
       width: 90%;
       height: 55%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-48%, -50%);
     }
     &__form {
       width: 65%;
@@ -225,6 +222,60 @@
       }
       &__error {
         width: 99%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@include mobile_sm_max {
+  .contact {
+    width: 100%;
+    &__header {
+      margin: 1%;
+    }
+    &__infoContainer {
+      width: 85%;
+      height: 100%;
+      margin-top: 10%;
+      &__infoText {
+        font-size: 22px;
+      }
+      &__infoSvg {
+        width: 95%;
+      }
+    }
+    &__formContainer {
+      width: 90%;
+      height: 70%;
+      margin-top: 65px;
+    }
+    &__form {
+      width: 98%;
+      height: 100%;
+      &__icon {
+        font-size: 25px;
+      }
+      &__input,
+      &__textArea {
+        max-width: 100%;
+        width: 100%;
+      }
+      &__svgContainer {
+        background: $yellowGradient;
+        width: 0%;
+        display: none;
+        svg {
+          height: 35%;
+        }
+      }
+      &__button {
+        margin-top: 10px;
+        font-size: 17px;
+        padding: 3px 8px;
+      }
+      &__error {
+        width: 100%;
         font-size: 15px;
       }
     }

@@ -21,18 +21,14 @@ $blackWithOpacity: rgba(22, 24, 29, 0.8);
 }
 $shadow: 0 2px 20px -7px $white;
 $bshadow: 1px 1px 7px $black;
-// RWD breakpoints
 
-$screen-sm-max: 576px;
+// RWD breakpoints
+$screen-sm-min: 360px;
+$screen-sm-max: 600px;
 
 // Small tablets (portrait view)
 $screen-tablet: 768px;
-
-// Tablets and small desktops
-$screen-lg-max: 992px;
-
-// // Large tablets and desktops
-// $screen-xl-max: 1200px;
+$second-screen-tablet: 1024px;
 
 // laptops
 $screen-xl-max: 1367px;
@@ -50,7 +46,13 @@ $screen-xl-max: 1367px;
 }
 
 @mixin tablet_portrait {
-  @media only screen and (max-width: #{$screen-tablet}) {
+  @media only screen and (max-width: #{$screen-tablet}) and (max-height: #{$second-screen-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile_sm_max {
+  @media only screen and (max-width: #{$screen-sm-max}) {
     @content;
   }
 }

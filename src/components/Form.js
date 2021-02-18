@@ -34,7 +34,11 @@ const Form = () => {
 
     let tl = gsap.timeline({ delay: 0.5 });
     tl.set([email1, email2, email3, message], { opacity: 0 })
-      .from(form, { opacity: 0, x: -1000, duration: 1.2 })
+      .fromTo(
+        form,
+        { opacity: 0, x: -800, duration: 1.2 },
+        { opacity: 1, x: 0 }
+      )
       .to(mobile, {
         rotation: -2,
         transformOrigin: "center",

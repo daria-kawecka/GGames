@@ -90,7 +90,6 @@
       .crewSection__crewMember {
         width: 52%;
         height: 30%;
-        background: $yellowGradient;
         &--image {
           width: 8vh;
           height: 8vh;
@@ -102,6 +101,41 @@
         }
         &--character {
           font-size: 2.8vw;
+        }
+      }
+    }
+  }
+}
+
+@include mobile_sm_max {
+  .crewSection {
+    height: 120vh;
+    &__header {
+      font-size: 40px;
+      margin-top: -10px;
+    }
+    &__container {
+      top: 6%;
+      margin: 0px;
+      padding: 0px;
+      height: 83%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .crewSection__crewMember {
+        width: 53%;
+        &--image {
+          width: 9vh;
+          height: 9vh;
+          margin: 1%;
+        }
+        &--text {
+          font-size: 0.73em;
+          padding: 0 3%;
+        }
+        &--character {
+          font-size: 3.1vw;
         }
       }
     }

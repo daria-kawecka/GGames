@@ -122,3 +122,29 @@
     }
   }
 }
+
+@include mobile_sm_max {
+  .aboutSection {
+    &__textContainer {
+      top: -6%;
+      right: 0;
+      width: 92%;
+      height: 41%;
+      box-shadow: $bshadow;
+      padding: 20px;
+      &__header {
+        font-size: 2.1em;
+        margin-top: 0px;
+      }
+      &__text {
+        margin-top: 10px;
+        font-size: 0.96em;
+      }
+    }
+    &__parallaxContainer {
+      align-self: flex-start;
+      top: -6%;
+      height: 36%;
+    }
+  }
+}

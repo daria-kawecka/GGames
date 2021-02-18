@@ -86,21 +86,10 @@
 
 @include tablet_portrait {
   .locationSection {
-    height: 100vh;
-    max-width: 100%;
-    position: relative;
-    background: $yellowGradient;
-    overflow: hidden;
     &__header {
-      color: $black;
       font-size: 50px;
       text-align: center;
       font-weight: 700;
-      &--span {
-        letter-spacing: 3px;
-        color: $white;
-        @include textShadow;
-      }
     }
     &__container {
       width: 100%;
@@ -129,6 +118,30 @@
       }
       &--text {
         font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@include mobile_sm_max {
+  .locationSection {
+    &__header {
+      font-size: 40px;
+    }
+    &__container {
+      height: 75%;
+      margin: 1% 0;
+    }
+    &__mapContainer {
+      height: 45%;
+    }
+    &__aboutLocation {
+      height: 43%;
+      &--header {
+        font-size: 1.6rem;
+      }
+      &--text {
+        font-size: 1.3rem;
       }
     }
   }
