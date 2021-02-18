@@ -179,3 +179,27 @@
     }
   }
 }
+
+@include mobile_sm_min {
+  .locationSection {
+    &__header {
+      font-size: 30px;
+    }
+    &__container {
+      height: 75%;
+      margin: 1% 0;
+    }
+    &__mapContainer {
+      height: 46%;
+    }
+    &__aboutLocation {
+      height: 41%;
+      &--header {
+        font-size: 1.3rem;
+      }
+      &--text {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

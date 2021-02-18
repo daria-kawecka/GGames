@@ -168,28 +168,6 @@
   }
 }
 
-@keyframes loading {
-  0%,
-  100% {
-    stroke-dashoffset: 220;
-  }
-  50% {
-    stroke-dashoffset: 0;
-  }
-  50.1% {
-    stroke-dashoffset: 440;
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @include tablet_portrait {
   .gamesStore__main {
     .form {
@@ -327,5 +305,103 @@
         font-size: 30px;
       }
     }
+  }
+}
+
+@include mobile_sm_min {
+  .gamesStore__main {
+    .form {
+      height: 35px;
+      width: 220px;
+      &__search {
+        width: 190px;
+        font-size: 14px;
+        &--button {
+          width: 40px;
+        }
+        &--icon {
+          font-size: 14px;
+        }
+      }
+    }
+    .games {
+      width: 100%;
+      margin: 50px 0;
+      &__gameContainer {
+        width: 59vw;
+        height: 60vh;
+      }
+      &__name {
+        font-size: 18px;
+        height: 45px;
+        line-height: 21px;
+      }
+      &__img {
+        height: 335px;
+        width: 100%;
+      }
+      &__price {
+        width: 180px;
+        height: 170px;
+        padding: 2px;
+        &__text {
+          font-size: 1.2rem;
+        }
+        &__money {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    .loading {
+      width: 85%;
+      height: 80vh;
+      margin: 0 35px;
+      &__circle {
+        width: 200px;
+        transform: scale(0.3);
+        animation: rotateSm 2s linear infinite;
+        circle {
+          stroke-width: 8;
+          stroke-dasharray: 360;
+          stroke-dashoffset: 200;
+          transform: translate(10px, 10px);
+        }
+      }
+      &__text {
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    stroke-dashoffset: 220;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  50.1% {
+    stroke-dashoffset: 440;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateSm {
+  0% {
+    transform: scale(0.6) rotate(0deg);
+  }
+  100% {
+    transform: scale(0.6) rotate(360deg);
   }
 }

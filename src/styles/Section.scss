@@ -81,15 +81,9 @@
 
 @include tablet_portrait {
   .aboutSection {
-    height: 100vh;
-    max-width: 100%;
-    position: relative;
-    background: $yellowGradient;
-    display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     &__textContainer {
       top: -5%;
       right: 0;
@@ -164,6 +158,28 @@
       align-self: flex-start;
       top: -6%;
       height: 36%;
+    }
+  }
+}
+
+@include mobile_sm_min {
+  .aboutSection {
+    &__textContainer {
+      top: -5%;
+      height: 42%;
+      padding: 20px;
+      &__header {
+        font-size: 1.7em;
+      }
+      &__text {
+        margin-top: 5px;
+        font-size: 0.85em;
+      }
+    }
+    &__parallaxContainer {
+      align-self: flex-start;
+      top: -6%;
+      height: 30%;
     }
   }
 }

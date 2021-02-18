@@ -270,13 +270,42 @@
         }
       }
       &__button {
+        width: 100%;
         margin-top: 10px;
         font-size: 17px;
         padding: 3px 8px;
       }
       &__error {
         width: 100%;
+        font-weight: 400;
         font-size: 15px;
+      }
+    }
+  }
+}
+
+@include mobile_sm_min {
+  .contact {
+    &__form {
+      padding: 5px 15px 15px 15px;
+    }
+    &__header {
+      margin: 0;
+      font-size: 25px;
+    }
+    &__infoContainer {
+      height: 100%;
+      margin-top: 14%;
+      &__infoText {
+        font-size: 18px;
+      }
+      &__infoSvg {
+        width: 97%;
+      }
+    }
+    &__form {
+      &__error {
+        font-size: 13px;
       }
     }
   }

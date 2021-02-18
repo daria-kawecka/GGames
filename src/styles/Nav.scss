@@ -118,12 +118,12 @@
     min-height: 80px;
     width: 100%;
     margin-top: 15px;
-
     &__logo-link {
       height: 50px;
       width: 50px;
       color: $yellow;
       font-size: 30px;
+      padding: 0;
       z-index: 200;
       display: inline;
       &__svg {

@@ -174,3 +174,30 @@
     }
   }
 }
+
+@include mobile_sm_min {
+  .crewSection {
+    height: 120vh;
+    &__header {
+      font-size: 35px;
+      margin-top: -5px;
+    }
+    &__container {
+      top: 4%;
+      height: 85%;
+      .crewSection__crewMember {
+        width: 65%;
+        height: 30%;
+        &--image {
+          margin: 2px;
+        }
+        &--text {
+          padding: 0 1%;
+        }
+        &--character {
+          font-size: 1.22em;
+        }
+      }
+    }
+  }
+}
