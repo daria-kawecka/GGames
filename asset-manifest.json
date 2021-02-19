@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GGames/static/css/main.230e7785.chunk.css",
-    "main.js": "/GGames/static/js/main.eb89c425.chunk.js",
-    "main.js.map": "/GGames/static/js/main.eb89c425.chunk.js.map",
+    "main.js": "/GGames/static/js/main.1c3b7c38.chunk.js",
+    "main.js.map": "/GGames/static/js/main.1c3b7c38.chunk.js.map",
     "runtime-main.js": "/GGames/static/js/runtime-main.33351c6d.js",
     "runtime-main.js.map": "/GGames/static/js/runtime-main.33351c6d.js.map",
     "static/js/2.201a9df5.chunk.js": "/GGames/static/js/2.201a9df5.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.33351c6d.js",
     "static/js/2.201a9df5.chunk.js",
     "static/css/main.230e7785.chunk.css",
-    "static/js/main.eb89c425.chunk.js"
+    "static/js/main.1c3b7c38.chunk.js"
   ]
 }
