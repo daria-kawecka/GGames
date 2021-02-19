@@ -5,7 +5,7 @@ import Main from "./pages/Main.js";
 import About from "./pages/About.js";
 import Games_Store from "./pages/Games_Store.js";
 import Contact from "./pages/Contact.js";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

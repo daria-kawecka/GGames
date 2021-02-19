@@ -1,8 +1,9 @@
 {
   "name": "GGames",
   "version": "0.1.0",
+  "proxy": "https://cors-anywhere.herokuapp.com/",
   "private": true,
-  "homepage": "https://daria-kawecka.github.io/GGames/",
+  "homepage": "https://daria-kawecka.github.io/GGames",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.0",
@@ -26,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
