@@ -7,16 +7,21 @@ const Games_Store = () => {
   const [filteredGames, setFilteredGames] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const gamesApi =
-    "https://cors-anywhere.herokuapp.com/https://www.giantbomb.com/api/games/?api_key=b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143&limit=20&format=json&sort=date_last_updated:desc";
+    "https://cors-anywhere.herokuapp.com/https://www.giantbomb.com/api/games/?api_key=7f9b7323ec1c30899894f4e95b9e551f7f58860d&limit=20&format=json&sort=date_last_updated:desc";
   //7f9b7323ec1c30899894f4e95b9e551f7f58860d
   //b7d9a5a1b5d4d97811a92bebf8e480a3c0e20143
   const getGames = async () => {
-    axios.get(gamesApi).then((response) => {
-      setGames(response.data.results);
-    });
+    axios
+      .get(
+        "https://cors.bridged.cc/https://www.giantbomb.com/api/games/?api_key=7f9b7323ec1c30899894f4e95b9e551f7f58860d&limit=20&format=json&sort=date_last_updated:desc",
+        { headers: { "Access-Control-Allow-Origin": "*" } }
+      )
+      .then((response) => {
+        setGames(response.data.results);
+      });
   };
 
-  const response = useEffect(() => {
+  useEffect(() => {
     getGames();
   }, []);
 

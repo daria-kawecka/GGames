@@ -153,13 +153,17 @@
       }
       &__text {
         margin-top: 8px;
-        font-size: 0.93em;
+        font-size: 0.9em;
       }
     }
     &__parallaxContainer {
       align-self: flex-start;
       top: -6%;
-      height: 36%;
+      height: 34%;
+      &__svg {
+        width: 96vw;
+        height: 36vh;
+      }
     }
   }
 }
@@ -168,20 +172,24 @@
   .aboutSection {
     &__textContainer {
       top: -5%;
-      height: 42%;
+      height: 45%;
       padding: 20px;
       &__header {
         font-size: 1.7em;
       }
       &__text {
         margin-top: 5px;
-        font-size: 0.85em;
+        font-size: 0.83em;
       }
     }
     &__parallaxContainer {
       align-self: flex-start;
       top: -6%;
-      height: 30%;
+      height: 29%;
+      &__svg {
+        width: 92vw;
+        height: 29vh;
+      }
     }
   }
 }

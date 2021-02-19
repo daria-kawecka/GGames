@@ -18,8 +18,6 @@ const Section = () => {
     const svg = animation.current;
     const text = [rightSide.current];
     const rocket = svg.getElementById("rocket");
-    svg.removeAttribute("display");
-    console.log(svg, svg.data);
     // parralax:
     const parallaxInstance = new Parallax(element, {
       relativeInput: true,
@@ -27,7 +25,7 @@ const Section = () => {
     });
 
     parallaxInstance.friction(0.15, 0.15);
-    parallaxInstance.origin(0.5, 1);
+    parallaxInstance.origin(0.3, 1);
 
     // gsap animation
     const fire = svg.getElementById("fire");

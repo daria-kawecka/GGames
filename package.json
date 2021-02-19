@@ -1,7 +1,6 @@
 {
   "name": "GGames",
   "version": "0.1.0",
-  "proxy": "https://cors-anywhere.herokuapp.com/",
   "private": true,
   "homepage": "https://daria-kawecka.github.io/GGames",
   "dependencies": {
