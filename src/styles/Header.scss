@@ -6,7 +6,7 @@
   padding-top: 25px;
   overflow-y: hidden;
   display: grid;
-  grid-template-columns: 1.5fr 0.7fr;
+  grid-template-columns: 1.5fr 1.1fr;
   grid-template-rows: 50% 50%;
   grid-template-areas:
     "svg h1"
@@ -15,6 +15,32 @@
   background: $darkGradient;
   align-items: start;
   overflow: hidden;
+  .button {
+    grid-area: h1;
+    align-self: end;
+    justify-self: center;
+    bottom: 3%;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 8px;
+    background: $yellowGradient;
+    border: 1px solid $blackWithOpacity;
+    box-shadow: $shadow;
+    text-align: center;
+    transition: all 0.4s linear;
+
+    a {
+      display: block;
+      font-size: 16px;
+      color: $black;
+      text-decoration: none;
+      width: 100%;
+      transition: all 0.3s linear;
+    }
+  }
+  .button:hover a{
+    transform: scale(1.1);
+  }
   &__svg-game {
     width: 100%;
     height: 120%;
@@ -31,9 +57,10 @@
     grid-area: h1;
     cursor: context-menu;
     align-self: center;
-    justify-self: start;
+    justify-self: center;
   }
   &__text h1 {
+    justify-self: center;
     font-size: 70px;
     font-weight: 700;
     color: rgb(237, 237, 237);
@@ -56,6 +83,18 @@
     overflow: hidden;
     grid-template-columns: 1.2fr 1fr;
     grid-template-rows: 50% 50%;
+    .button {
+      grid-area: none;
+      position: absolute;
+      bottom: 30%;
+      width: 42%;
+      height: 7%;
+      left:50%;
+      transform: translateX(-50%);
+      a {
+        font-size: 20px;
+      }
+    }
     .header__svg-game {
       width: 90%;
       height: 110%;
@@ -83,6 +122,18 @@
     top: 0px;
     grid-template-columns: 1.2fr 1.4fr;
     grid-template-rows: 60% 40%;
+    .button {
+      grid-area: none;
+      position: absolute;
+      bottom: 30%;
+      width: 40%;
+      height: 7%;
+      left:50%;
+      transform: translateX(-50%);
+      a {
+        font-size: 16px;
+      }
+    }
     .header__svg-game {
       width: 95%;
       height: 90%;
