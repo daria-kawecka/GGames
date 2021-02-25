@@ -59,6 +59,7 @@
   &__svg-wave {
     @include svg;
     transform: scaleX(-1);
+    bottom: -1%;
   }
 }
 
