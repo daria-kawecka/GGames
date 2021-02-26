@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   height: 80px;
   margin: 20px 0 60px 0;
@@ -13,11 +13,11 @@
     &--location,
     &--phone,
     &--email {
-      margin: 7px;
-      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      margin: 6px;
+      font-size: clamp(0.9rem, 1.3vw, 1.1rem);
     }
     &--text {
-      margin: 7px;
+      margin: 6px;
       font-size: clamp(1.2rem, 1.7vw, 1.3rem);
       color: $yellowWithOpacity;
     }
@@ -25,7 +25,7 @@
   &__contribution {
     &--author,
     &--github {
-      margin: 7px;
+      margin: 6px;
       color: $yellowWithOpacity;
       &--link {
         color: $whiteWithOpacity;
@@ -35,9 +35,9 @@
   }
   .fas,
   .fa-github {
-    padding-right: 20px;
+    padding-right: 16px;
     font-size: 20px;
-    font-size: clamp(1.1rem, 1.6vw, 1.2rem);
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
     color: $yellowWithOpacity;
   }
 }
