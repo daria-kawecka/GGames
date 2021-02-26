@@ -6,6 +6,7 @@ import Games_Store from "./pages/Games_Store.js";
 import Gadgets_Store from "./pages/Gadgets_Store.js";
 import Contact from "./pages/Contact.js";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/store/games" component={Games_Store}></Route>
         <Route path="/store/gadgets" component={Gadgets_Store}></Route>
         <Route path="/contact" component={Contact}></Route>
+        <Route component={NotFound}></Route>
       </Switch>
     </Router>
   );

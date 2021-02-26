@@ -1,0 +1,198 @@
+@import "__variables.scss";
+
+.error {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  height: 65vh;
+  margin: 30px auto;
+  padding: 15px;
+  &__textContainer {
+    color: $white;
+    &--header {
+      color: $yellow;
+      font-size: 3.8vw;
+    }
+    &--text {
+      font-size: 1.8vw;
+    }
+    &--404 {
+      font-size: 1vw;
+      color: $whiteWithOpacity;
+    }
+    &--button {
+      font-size: 0.9rem;
+      margin: 15px 0;
+      padding: 8px 19px;
+      outline: none;
+      border-radius: 8px;
+      border: none;
+      background: $yellowGradient;
+      color: $blackWithOpacity;
+      transition: all 0.4s linear;
+    }
+    &--button:hover {
+      transform: scale(1.07);
+    }
+  }
+  &__svg {
+    height: 130%;
+    width: 50%;
+  }
+}
+
+@include xl {
+  .error {
+    width: 70vw;
+    height: 85vh;
+    &__textContainer {
+      color: $white;
+      &--header {
+        font-size: 4.8vh;
+      }
+      &--text {
+        font-size: 2.2vh;
+      }
+      &--404 {
+        font-size: 1.5vh;
+        color: $whiteWithOpacity;
+      }
+      &--button {
+        font-size: 20px;
+      }
+    }
+    &__svg {
+      width: 78%;
+      height: 95%;
+    }
+  }
+}
+
+@include square {
+  .error {
+    width: 55vw;
+    height: 75vh;
+    &__textContainer {
+      &--header {
+        font-size: 4.8vw;
+      }
+      &--text {
+        font-size: 2.2vw;
+      }
+      &--404 {
+        font-size: 1.2vw;
+      }
+    }
+    &__svg {
+      width: 60%;
+    }
+  }
+}
+
+@include tablet_l {
+  .error {
+    width: 85vw;
+    height: 75vh;
+    &__textContainer {
+      &--header {
+        font-size: 4.8vh;
+      }
+      &--text {
+        font-size: 2vh;
+      }
+      &--404 {
+        font-size: 1.6vh;
+      }
+      &--button {
+        font-size: 25px;
+      }
+    }
+    &__svg {
+      width: 60%;
+    }
+  }
+}
+
+@include tablet_portrait {
+  .error {
+    width: 80vw;
+    height: 80vh;
+    &__textContainer {
+      &--header {
+        font-size: 4.7vh;
+      }
+      &--text {
+        font-size: 2.2vh;
+      }
+      &--404 {
+        font-size: 1.5vh;
+      }
+      &--button {
+        width: 90%;
+        font-size: 14px;
+      }
+    }
+    &__svg {
+      width: 70%;
+      height: 90%;
+    }
+  }
+}
+
+@include tablet_sm {
+  .error {
+    margin: 0 auto;
+    width: 95vw;
+    height: 80vh;
+    &__textContainer {
+      &--header {
+        font-size: 4.8vh;
+      }
+
+      &--404 {
+        font-size: 1.5vh;
+      }
+      &--button {
+        width: 90%;
+        padding: 5px 15px;
+        font-size: 12px;
+      }
+    }
+    &__svg {
+      width: 48%;
+      height: 50%;
+    }
+  }
+}
+
+@include mobile_sm_min {
+  .error {
+    width: 95vw;
+    height: 75vh;
+    &__textContainer {
+      &--header {
+        font-size: 1.6rem;
+      }
+      &--text {
+        font-size: 1rem;
+      }
+      &--404 {
+        font-size: 0.7rem;
+      }
+      &--button {
+        width: 90%;
+        padding: 5px 15px;
+        font-size: 12px;
+      }
+      &--button {
+        width: 99%;
+        padding: 3px 8px;
+        font-size: 12px;
+      }
+    }
+    &__svg {
+      width: 56%;
+    }
+  }
+}

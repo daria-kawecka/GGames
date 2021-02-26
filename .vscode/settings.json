@@ -1,5 +1,4 @@
 {
     "editor.tabCompletion": "on",
-    "emmet.triggerExpansionOnTab": true,
     "emmet.showSuggestionsAsSnippets": true
 }
