@@ -1,6 +1,6 @@
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L, { icon } from "leaflet";
+import L from "leaflet";
 import markerPng from "../images/marker.png";
 
 const markerIcon = new L.icon({

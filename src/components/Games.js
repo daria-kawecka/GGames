@@ -8,7 +8,6 @@ const Games = ({ name, image, id }) => {
   if (id < 1000) {
     price = (id / 2) * (2.5).toFixed(2);
   } else price = (id / 1000).toFixed(2);
-  console.log(id);
   return (
     <>
       <div className="games__gameContainer">

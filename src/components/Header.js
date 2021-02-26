@@ -15,7 +15,6 @@ const Header = ({ text, button }) => {
       </h1>
     ),
   };
-  console.log(Header.defaultProps);
   useEffect(() => {
     const elements = wrapper.current;
     const head = elements.getElementById("Head");
