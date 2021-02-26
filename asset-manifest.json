@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/GGames/static/css/main.fb7c0dbc.chunk.css",
-    "main.js": "/GGames/static/js/main.ca425ba9.chunk.js",
-    "main.js.map": "/GGames/static/js/main.ca425ba9.chunk.js.map",
+    "main.css": "/GGames/static/css/main.11e56732.chunk.css",
+    "main.js": "/GGames/static/js/main.4de7d052.chunk.js",
+    "main.js.map": "/GGames/static/js/main.4de7d052.chunk.js.map",
     "runtime-main.js": "/GGames/static/js/runtime-main.33351c6d.js",
     "runtime-main.js.map": "/GGames/static/js/runtime-main.33351c6d.js.map",
-    "static/js/2.201a9df5.chunk.js": "/GGames/static/js/2.201a9df5.chunk.js",
-    "static/js/2.201a9df5.chunk.js.map": "/GGames/static/js/2.201a9df5.chunk.js.map",
+    "static/js/2.7335db5b.chunk.js": "/GGames/static/js/2.7335db5b.chunk.js",
+    "static/js/2.7335db5b.chunk.js.map": "/GGames/static/js/2.7335db5b.chunk.js.map",
     "index.html": "/GGames/index.html",
-    "static/css/main.fb7c0dbc.chunk.css.map": "/GGames/static/css/main.fb7c0dbc.chunk.css.map",
-    "static/js/2.201a9df5.chunk.js.LICENSE.txt": "/GGames/static/js/2.201a9df5.chunk.js.LICENSE.txt",
+    "static/css/main.11e56732.chunk.css.map": "/GGames/static/css/main.11e56732.chunk.css.map",
+    "static/js/2.7335db5b.chunk.js.LICENSE.txt": "/GGames/static/js/2.7335db5b.chunk.js.LICENSE.txt",
+    "static/media/404Page.679e1376.svg": "/GGames/static/media/404Page.679e1376.svg",
     "static/media/Email_SVG.b70762fb.svg": "/GGames/static/media/Email_SVG.b70762fb.svg",
     "static/media/Startup_SVG.c63dd064.svg": "/GGames/static/media/Startup_SVG.c63dd064.svg",
     "static/media/controller.0aa0698c.svg": "/GGames/static/media/controller.0aa0698c.svg",
@@ -23,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.33351c6d.js",
-    "static/js/2.201a9df5.chunk.js",
-    "static/css/main.fb7c0dbc.chunk.css",
-    "static/js/main.ca425ba9.chunk.js"
+    "static/js/2.7335db5b.chunk.js",
+    "static/css/main.11e56732.chunk.css",
+    "static/js/main.4de7d052.chunk.js"
   ]
 }
