@@ -9,7 +9,7 @@ const Main = () => {
   const button = (
     <button className="button">
       {" "}
-      <a href="/#/about-us">About us </a>
+      <a href="/GGames/#/about-us">About us </a>
     </button>
   );
   return (
